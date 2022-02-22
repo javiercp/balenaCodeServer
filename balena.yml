@@ -1,11 +1,10 @@
-name: balenaCodeServer
+name: myBalenaCodeServer
 type: sw.application
 description: >-
-  balenaCodeServer is a free Visual Studio Code based IDE that runs in your browser,
+  myBalenaCodeServer is a personal fork of balenaCodeServer, a free Visual Studio Code based IDE that runs in your browser,
   served from your Raspberry Pi!
 post-provisioning: >-
-  ### Using balenaCodeServer
-
+  ### Using myBalenaCodeServer
 
     - Type `<device-ip>:8080` in a browser window _(You can find your device IP address in the Balena Console)_
 
@@ -18,21 +17,21 @@ assets:
   repository: 
     type: blob.asset
     data:
-      url: 'https://github.com/SamEureka/balenaCodeServer'
+      url: 'https://github.com/javiercp/balenaCodeServer'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/SamEureka/balenaCodeServer/main/logo.png
+        https://raw.githubusercontent.com/javiercp/balenaCodeServer/main/logo.png
 data:
   applicationEnvironmentVariables:
-    - TZ: America/Los_Angeles
+    - TZ: Europe/Paris
     - PASSWORD: b@13n4!
     - SUDO_PASSWORD: b@13n4!sudo
-    - SHELL: /usr/bin/zsh
-  defaultDeviceType: raspberrypi3-64
+    - SHELL: /usr/bin/bash
+  defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi3
     - raspberrypi3-64
     - raspberrypi4-64
-version: 1.0.10
+version: 1.1.0

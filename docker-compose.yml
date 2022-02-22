@@ -8,7 +8,7 @@ services:
       - PORT=8080
       - PUID=1000
       - PGID=1000
-      - TZ=America/Los_Angeles
+      - TZ=Europe/Paris
       - PASSWORD=password #optional
       - HASHED_PASSWORD= #optional
       - SUDO_PASSWORD=password #optional
@@ -16,8 +16,8 @@ services:
       - PROXY_DOMAIN= #optional
       - DEFAULT_WORKSPACE=/config/workspace #optional
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
-      - DOCKER_MODS=linuxserver/mods:code-server-zsh
-      - SHELL=/usr/bin/zsh
+      - DOCKER_MODS=linuxserver/mods:code-server-dotnet|linuxserver/mods:code-server-python3|linuxserver/mods:code-server-golang
+      - SHELL=/usr/bin/bash
     volumes:
       - "appdata:/config"
     restart: unless-stopped

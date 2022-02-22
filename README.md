@@ -1,15 +1,21 @@
-# <img src="logo.png" alt="vs code logo" width="60" /> balenaCodeServer
+# <img src="logo.png" alt="vs code logo" width="60" /> myBalenaCodeServer
 
-balenaCodeServer is a free Visual Studio Code based IDE that runs in your browser, served from your Raspberry Pi!
+myBalenaCodeServer is a free Visual Studio Code based IDE that runs in your browser, served from your Raspberry Pi!
+
+* Forked from [balenaCodeServer](https://github.com/SamEureka/balenaCodeServer), for personal use, to meet my development needs.
 
 * Based on the [linuxserver.io](https://github.com/linuxserver/docker-code-server) code-server Docker image.
 
-* Includes the [ZSH Docker Mod](https://github.com/linuxserver/docker-mods/tree/code-server-zsh) Which adds Oh-My-Zsh to your terminal. 
+* Includes the following mods:
+  
+  * [DotNet Mod](https://github.com/linuxserver/docker-mods/tree/code-server-dotnet) for .NET development.
+  * [Golang Mod](https://github.com/linuxserver/docker-mods/tree/code-server-golang) for Golang development.
+  * [Python3 Mod](https://github.com/linuxserver/docker-mods/tree/code-server-python3) for Python development.
 
 ---
 
 ### Equipment Needed
-* Raspberry Pi (tested on Pi3 B+ and Pi4)
+* Raspberry Pi (tested on Pi4)
 ---
 ### Install
 Running this project is as simple as deploying it to a balenaCloud application. You can deploy it in one click by using the button below:
@@ -17,7 +23,7 @@ Running this project is as simple as deploying it to a balenaCloud application. 
 [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/javiercp/balenaCodeServer)
 
 ---
-### Using balenaCodeServer
+### Using myBalenaCodeServer
 
 * Type `<device-ip>:8080` in a browser window _(You can find your device IP address in the Balena Console)_
 * The default password for servers deployed with the balena deploy button is `b@13n4!` 
