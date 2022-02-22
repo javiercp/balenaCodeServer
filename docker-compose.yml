@@ -4,6 +4,8 @@ services:
     build: ./code-server
     container_name: code-server
     network_mode: host
+    devices:
+      - "/dev/bus/usb"    
     environment:
       - PORT=8080
       - PUID=1000
@@ -16,7 +18,8 @@ services:
       - PROXY_DOMAIN= #optional
       - DEFAULT_WORKSPACE=/config/workspace #optional
       - 'DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket'
-      - DOCKER_MODS=linuxserver/mods:code-server-dotnet|linuxserver/mods:code-server-python3|linuxserver/mods:code-server-golang
+      - DOCKER_MODS=linuxserver/mods:code-server-dotnet|linuxserver/mods:code-server-python3|linuxserver/mods:code-server-golang|linuxserver/mods:code-server-docker|linuxserver/mods:code-server-extension-arguments
+      - VSCODE_EXTENSION_IDS=ms-python.python|golang.go|muhammad-sammy.csharp|ms-azuretools.vscode-docker
       - SHELL=/usr/bin/bash
     volumes:
       - "appdata:/config"
