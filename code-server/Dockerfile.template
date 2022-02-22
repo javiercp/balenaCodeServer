@@ -10,5 +10,4 @@ RUN apt-get update && apt-get install -y make g++ gh python3
 
 # Build/install balena-cli (ARM method)
 RUN touch ~/.bashrc && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-RUN . ~/.bashrc && nvm install 12 
-RUN npm install balena-cli --global --production --unsafe-perm
+RUN . ~/.bashrc && nvm install 12 && npm install balena-cli --global --production --unsafe-perm
