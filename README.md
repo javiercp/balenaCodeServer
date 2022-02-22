@@ -14,7 +14,7 @@ balenaCodeServer is a free Visual Studio Code based IDE that runs in your browse
 ### Install
 Running this project is as simple as deploying it to a balenaCloud application. You can deploy it in one click by using the button below:
 
-[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/SamEureka/balenaCodeServer)
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/javiercp/balenaCodeServer)
 
 ---
 ### Using balenaCodeServer
