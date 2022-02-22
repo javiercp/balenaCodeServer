@@ -9,6 +9,7 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
 RUN apt-get update && apt-get install -y make g++ gh python3
 
 # Build/install balena-cli (ARM method)
+RUN touch .bashrc
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 RUN . ~/.bashrc
 RUN nvm install 12
